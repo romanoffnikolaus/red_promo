@@ -73,6 +73,21 @@ services:
       - celery-beat
       - test
 
+  nginx:
+    build: 
+      dockerfile: Dockerfile
+      context: ./nginx
+    container_name: nginx
+    image: nginx
+    command: /bin/sh -c "chmod -R 755 /application/static && nginx -g 'daemon off;'"
+    volumes:
+      - static_volume:/application/static
+    depends_on:
+      - main_api
+    ports:
+      - "80:80"
+    restart: always
+
 
 volumes: 
   static_volume:

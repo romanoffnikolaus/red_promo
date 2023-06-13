@@ -1,6 +1,9 @@
 # Red_promo
 
 
+# Доступ после пуска проекта: http://0.0.0.0/docs/
+
+
 Content
 * [Comments](#Comments)
 * [Docker running](#Dockerrunning)
@@ -31,9 +34,17 @@ CSV: read_csv/: Принимает в запросе csv файл с ключе�
 
 2. Установить Docker + docker-compose
 
-3. запуск проекта
+3. Пуск проекта
 ```bash
-sudo docker-compose up -d
+sudo docker-compose up (проверить логи при пуске)
+```
+4. Остановка контейнеров
+```bash
+sudo docker-compose stop (crtl + c)
+```
+5. Запуск в демоне
+```bash
+sudo docker-compose up -d 
 ```
 4. Создание админа и тестовых данных
 ```bash
