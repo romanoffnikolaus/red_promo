@@ -14,3 +14,9 @@ make static:
 make test:
 	python manage.py test
 
+make up:
+	sudo docker-compose up
+
+make down:
+	sudo docker-compose down
+	
